@@ -1,0 +1,21 @@
+<p>
+  timestamp works!
+</p>
+<hr>
+
+<button md-button (click)="toggleParagraph()">Display Details</button>
+
+<p *ngIf="displayP; else elseBlock">Contents in the paragraph.</p>
+<ng-template #elseBlock>
+  <p>hidden</p>
+</ng-template>
+
+<ol>
+  <li *ngFor="let item of btnLogs, let i = index">
+    <p [ngStyle]="{backgroundColor: i > 3 ? 'cornflowerblue' : 'transparent'}"
+       [ngClass]="{fifthStyle: i > 3 ? true : false}">
+      {{item | date: 'medium'}}</p>
+  </li>
+</ol>
+
+<p>{{btnLogs}}</p>

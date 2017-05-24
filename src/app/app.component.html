@@ -3,3 +3,5 @@
 </h1>
 <hr>
 <app-servers></app-servers>
+<button md-button (click)="displayTimestamp = !displayTimestamp">Show Timestamp</button>
+<app-timestamp *ngIf="displayTimestamp === true"></app-timestamp>
